@@ -34,7 +34,7 @@ y_test  = pd.read_csv(f'{DATA_DIR}/y_test.csv').squeeze()
 print(f"Data loaded - Train: {X_train.shape}, Test: {X_test.shape}")
 
 # ── Training ──────────────────────────────────────────────────────────────────
-with mlflow.start_run(run_name="RandomForest_HeartDisease"):
+with mlflow.start_run():
 
     params = {
         "n_estimators": 100,
