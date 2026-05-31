@@ -24,7 +24,7 @@ mlflow.set_experiment("Latihan Heart Disease Classification")
 
 # ── Load Data ────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, 'nadataset_preprocessing')
+DATA_DIR = BASE_DIR
 
 X_train = pd.read_csv(f'{DATA_DIR}/X_train.csv')
 X_test  = pd.read_csv(f'{DATA_DIR}/X_test.csv')
