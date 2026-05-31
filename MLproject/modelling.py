@@ -1,6 +1,7 @@
 """
 modelling.py - untuk MLproject (Kriteria 3)
-Heart Disease Dataset - tanpa mlflow.start_run() karena sudah dihandle mlflow run
+Heart Disease Dataset
+Tracking URI dan experiment dihandle oleh mlflow run via env variable.
 """
 
 import pandas as pd
@@ -15,11 +16,6 @@ from sklearn.metrics import (
     f1_score, confusion_matrix
 )
 import os
-
-# ── Setup MLflow ──────────────────────────────────────────────────────────────
-tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", "http://127.0.0.1:5000")
-mlflow.set_tracking_uri(tracking_uri)
-mlflow.set_experiment("Latihan Heart Disease Classification")
 
 # ── Load Data ─────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
